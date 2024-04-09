@@ -43,6 +43,7 @@ Aby tekst był pogrubiony, to umieszczamy tekst w **dwóch gwiazdkach**, a jeśl
 ##### Można *italikiem* pisać w nagłówku 
 
 ```
+Inny tekst
 Aby sam tekst był w chunkach, to używamy symboli ```. Ale uwaga, nie działają tu komeny RMarkdown.
 ```
 Jeżeli tekst weźmiemy w pojedynczy ukośnik `to taki będzie tego efekt`.
