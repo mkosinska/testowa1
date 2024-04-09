@@ -1,0 +1,88 @@
+---
+title: "Testowa wersja"
+author: "MK"
+date: "2024-04-09"
+output: html_document
+---
+
+```{r setup, include=FALSE} 
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Nagłówek pierwszy - największy
+
+## Nagłówek drugi - nieco mniejszy
+
+### Nagłówek trzeci - jeszcze mniejszy
+
+# PODSTAWOWE INFORMACJE
+Aby napisać tekst, wystarczy zacząć pisać.
+
+Aby pisać od nowej linijki wystarczy dwa razy kliknąć enter.
+</br>
+</br>
+</br>
+Aby pisać jeszcze niżej można wykorzystać znaczniki z html'a.
+
+Zobaczmy jaki będzie wynik napisanego kodu. Trzeba wówczas nacisnąć przycisk **Knit**.
+
+Formatowanie i tworzenie list:
+
+- **pogrubienie**
+- *italik*
+  - ***pogrubienie i italik***
+- tekst `z tłem`
+- [link do strony](https://rmarkdown.rstudio.com/index.html)
+
+
+Aby tekst był pogrubiony, to umieszczamy tekst w **dwóch gwiazdkach**, a jeśli chcemy mieć tekst pochylony, to umieszczamy tekst w *pojedynczych gwiazdkach*. Jeżeli ma być pogrubiony i pochylony, to umieszczamy tekst w ***trzech gwiazdkach***.
+
+
+
+##### Można *italikiem* pisać w nagłówku 
+
+```
+Aby sam tekst był w chunkach, to używamy symboli ```. Ale uwaga, nie działają tu komeny RMarkdown.
+```
+Jeżeli tekst weźmiemy w pojedynczy ukośnik `to taki będzie tego efekt`.
+
+
+Można w tekście umieszczać wzory matematyczne w LateX: $f(x) = x^{2} + 1$
+ 
+# R a R Markdown
+Kody w języku R muszę umieścić w tzw. chunku```{r} i podać nazwę języka programowania, w którym będziemy programować - żeby Rstudio wiedziało, że będziemy pisać akurat w tym jezyku. 
+
+```{r}
+x = c(1,2,3,4)
+print(x)
+```
+R Markdown sam zwraca wyniki. Pokazuje je w białych okienkach.
+</br></br></br>
+
+Można zdefiniować jaki zbiór będziemy wykorzystywać w chunku
+```{r}
+head(iris, 5)
+
+library(ggplot2)
+
+ggplot(iris, aes(Petal.Length, 
+                 Petal.Width, 
+                 colour = factor(Species), 
+                 shape = factor(Species) )) +
+                 geom_point()
+```
+
+### Co jeśli nie chcę widzieć kodu R, a tylko sam wykres? Sam wynik danego kodu?
+
+Muszę dodać opcję `echo = FALSE`.
+
+```{r echo = FALSE}
+head(iris, 5)
+ggplot(iris, aes(Petal.Length, 
+                 Petal.Width, 
+                 colour = factor(Species), 
+                 shape = factor(Species) )) +
+                 geom_point()
+```
+
