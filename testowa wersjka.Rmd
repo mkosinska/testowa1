@@ -55,6 +55,8 @@ Kody w języku R muszę umieścić w tzw. chunku```{r} i podać nazwę języka p
 
 ```{r}
 x = c(1,2,3,4)
+y=c(7,5,6)
+plot(y)
 print(x)
 ```
 R Markdown sam zwraca wyniki. Pokazuje je w białych okienkach.
